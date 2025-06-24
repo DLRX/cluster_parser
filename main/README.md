@@ -1,0 +1,39 @@
+# Data as input
+
+Example input file (`data`):
+
+```
+>seq1 Fake protein 1
+AKDQCLERDNVETDAKDCNRQTFVINHHYHEMRILCMCRWAWFQHWHFIWEQEHNVRMCS
+RGWSMDEFIQEQLQCMKGLPSWRAKGERCHQMMGWTAFKKLWYDDHTLNWGDFISKIGQN
+RHTIRY
+>seq2 Fake protein 2
+LHCLAWSAKIHMDIMFNCVMFHLWLLFNCGYEHQLTLSQPAKGDLQMHMTLIELKQQIWQ
+AVFFLSHEGCKPCWYQQETFNPTHSHFMIYNMSMECHLNCYFQERPKLKYSRMRGEHSSR
+CDGRPRWDAMMLWGPNHQAPHKEICEPPVGKALALSCFYMLNFWISWCYCFYESYGNAWE
+TQPDRFYPTSLPQGVEIRGSGLNMHAHMQDHMEYGNEKGNGVHCNHCVKNRESKMPPHDW
+THIDICDDGLVLCKSWQGVQKLCFQLFWPIQMTNQKHAPHPDHAKVRLGYSRCKLPNTVF
+LVVGAPVKKPHPLIGRWTAMDGTVCS
+>seq3 Fake protein 3
+CRDLCPNYVGHLKIETDQVTCVMETNFSRAAIWVSMLRWLCQIFYVCPMFREQYQCLTPL
+RMHQWKCITSCYEN
+```
+
+
+# How to use with the following example
+
+```python
+python main/ck_parser.py -i ".\example\data" -o ".\example\output\data_saved.csv" -k "10"
+```
+
+## Result
+
+The file `data_saved.csv` will be created in the folder `.\example\output\`.  
+You can open it with a spreadsheet program or import it into Python with pandas:
+
+```python
+import pandas as pd
+
+df = pd.read_csv(r'.\example\output\data_saved.csv')
+print(df.head())
+```
