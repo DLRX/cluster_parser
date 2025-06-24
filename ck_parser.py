@@ -60,7 +60,7 @@ def read_multi_fasta_info(path, keyword = 'hypothetical'):
 #==================================================================================================================
 
 def main():
-     usage = usage = "python ck_parser.py -i <input_file> -o <output_dir> -p <parameters> \n" 
+     usage = "python ck_parser.py -i <input_file> -o <output_dir> \n" 
      parser = OptionParser(usage)
      parser.add_option("-i", "--input_file", dest="input_file", help="a csv that you want to parsed")
      parser.add_option("-o", "--output_dir", dest="output_dir", help="the path of the data will be saved")
@@ -90,7 +90,6 @@ def main():
                f.write(row)
 
      print(f"File is saved to {os.path.abspath(output_dir)}")
-
 
 
 #==================================================================================================================
