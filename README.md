@@ -8,3 +8,5 @@ ck_parser.py
 ```python
 python ck_parser.py -i <input_file> -o <output_dir>
 ```
+
+> **Reminder:** Check the [requirements.txt](./requirements.txt) file for necessary dependencies.
