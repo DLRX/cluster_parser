@@ -5,7 +5,7 @@ import random
 import string
 import os
 
-output_folder = r"C:\Users\dodol\Documents\GitHub\cluster_parser\data"
+output_folder = ".\data"
 os.makedirs(output_folder, exist_ok=True)
 
 def random_protein_seq(length):
