@@ -1,6 +1,5 @@
 # Data as input
-
-Example input file (`data`):
+> **Reminder:** Check the [`data`](./example/data) folder for example input files.
 
 ```
 >seq1 Fake protein 1
