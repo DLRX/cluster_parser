@@ -64,19 +64,21 @@ def main():
      parser = OptionParser(usage)
      parser.add_option("-i", "--input_file", dest="input_file", help="a csv that you want to parsed")
      parser.add_option("-o", "--output_dir", dest="output_dir", help="the path of the data will be saved")
+     parser.add_option("-k", "--keyword", dest="keyword", default="hypothetical", help="keyword to compute the percentage of sequences containing it (default: 'hypothetical')")
           
      (options, args) = parser.parse_args()
      folder_fasta = options.input_file
      output_dir = options.output_dir
+     keyword = options.keyword
 
      list_f = [f for f in os.listdir(os.path.abspath(folder_fasta)) if os.path.isfile(os.path.join(folder_fasta, f))]
 
      with open(os.path.abspath(output_dir),'w', encoding='utf-8') as f:
 
-          f.write("ClusterNumber,n,mean,std,min,max, %_hypotheticalOrna\n")
+          f.write(f"ClusterNumber,n,mean,std,min,max, %_keyword={keyword}\n")
 
           for elm in tqdm(list_f):
-               n, m, l, p = read_multi_fasta_info(os.path.join(folder_fasta, elm))
+               n, m, l, p = read_multi_fasta_info(os.path.join(folder_fasta, elm), keyword)
 
                ck = str(elm)[:-14]
 
