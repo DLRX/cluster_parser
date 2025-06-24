@@ -1,0 +1,9 @@
+optparse
+tqdm
+pandas
+os
+Bio.Seq
+Bio.SeqRecord
+Bio
+random
+string
