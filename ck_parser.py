@@ -80,7 +80,7 @@ def main():
           for elm in tqdm(list_f):
                n, m, l, p = read_multi_fasta_info(os.path.join(folder_fasta, elm), keyword)
 
-               ck = str(elm)[:-14]
+               ck = str(elm)#[:-14]
 
                if len(l) > 1:
                     variance = sum((x - m) ** 2 for x in l) / (len(l) - 1)
