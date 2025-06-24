@@ -1,5 +1,5 @@
 # Data as input
-> **Reminder:** Check the [`data`](./data) folder for example input files.
+> **Reminder:** Check the [`data`](data) folder for example input files.
 
 ```
 >seq1 Fake protein 1
