@@ -3,7 +3,6 @@ from tqdm import tqdm
 import pandas as pd
 import os
 
-
 #==================================================================================================================
 
 def writer_tab(df, output : str ):
