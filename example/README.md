@@ -108,3 +108,8 @@ subdivide_folder_by_size(input_dir, output_dir, n_sub)
 
 > Check the [`data_to_subdivide`](data_to_subdivide) folder for example output. (it will creat a n_sub = 3 folder with the same size)
 
+```
+subfolder_1: 41061 octets, 3 fichiers
+subfolder_2: 43068 octets, 3 fichiers
+subfolder_3: 41070 octets, 4 fichiers
+```

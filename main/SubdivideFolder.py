@@ -46,6 +46,4 @@ def subdivide_folder_by_size(input_dir, output_dir, n_subdivided):
         shutil.copy2(src_path, dst_path)
         subfolder_sizes[idx] += fsize
 
-    print(print_infos(output_dir))
-
 
