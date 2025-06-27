@@ -21,8 +21,7 @@ CRDLCPNYVGHLKIETDQVTCVMETNFSRAAIWVSMLRWLCQIFYVCPMFREQYQCLTPL
 RMHQWKCITSCYEN
 ```
 
-
-# How to use with the following example
+## How to use with the following example
 
 ```python
 python main/ck_parser.py -i ".\example\data" -o ".\example\output\stats_clusters.csv" -k "10"
@@ -68,7 +67,7 @@ LSLNTQKSRVDVLSATSVAGLASAAVIVVSA
 LSLNTQKLRADVPSATSVAGLASGAVIVVSA
 ```
 
-# How to use with the following example
+## How to use with the following example
 
 ```python
 python score_aln.py -i ".\example\data2"  -b ".\example\blosum\BLOSUM62.txt" -o ".\example\output" -s 10
