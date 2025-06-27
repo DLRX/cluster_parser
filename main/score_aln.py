@@ -31,7 +31,6 @@ def readBlosum(nameFile):
 	fi.close()
 	return Blosum
 
-
 #==================================================================================================================
 
 def calculeScore(AA,AA2,blosum):
@@ -127,10 +126,6 @@ def main():
 
         interet = [f for f, s in set_50_1st]
 
-
-
-
-
         list_f = [f for f in os.listdir(folder_aln) if os.path.isfile(os.path.join(folder_aln, f))]
 		
         len_file = len(list_f)
@@ -152,7 +147,9 @@ def main():
     # Save dict_scores to CSV
     df = pd.DataFrame(list(dict_scores.items()), columns=['filename', 'score'])
     df.to_csv(output_file, index=False)
-     
+
+
+
 #==================================================================================================================
 if __name__ == "__main__":
 	main()

@@ -28,9 +28,9 @@ def subdivide_folder_by_size(input_dir, output_dir, n_subdivided):
     files = [(f, os.path.getsize(os.path.join(input_dir, f))) for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f))]
     files_sorted = sorted(files, key=lambda x: x[1], reverse=True)
 
-    # Create subfolders and track their total size
     subfolders = []
     subfolder_sizes = []
+
     for i in range(n_subdivided):
         subfolder_name = f"subfolder_{i+1}"
         subfolder_path = os.path.join(output_dir, subfolder_name)
@@ -38,7 +38,6 @@ def subdivide_folder_by_size(input_dir, output_dir, n_subdivided):
         subfolders.append(subfolder_path)
         subfolder_sizes.append(0)
 
-    # Greedy assignment: always add next largest file to the subfolder with the smallest total size
     for fname, fsize in tqdm(files_sorted):
         idx = subfolder_sizes.index(min(subfolder_sizes))
         dst_folder = subfolders[idx]
@@ -49,11 +48,6 @@ def subdivide_folder_by_size(input_dir, output_dir, n_subdivided):
 
     print(print_infos(output_dir))
 
-
-
-
-# Utilisation
-subdivide_folder_by_size(input, output, n_sub)
 
 
 
