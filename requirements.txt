@@ -2,6 +2,8 @@ optparse
 tqdm
 pandas
 os
+shutil
+collections
 Bio.Seq
 Bio.SeqRecord
 Bio
