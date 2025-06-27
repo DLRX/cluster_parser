@@ -1,8 +1,8 @@
 
-# ** cluster_parser.py **
+# **cluster_parser.py **
 
 ## Data as input
-> **Reminder:** Check the [`data`](data) folder for example input files.
+> **Reminder:** Check the [`data`](data) folder for example input files. (a folder with a file per cluster that contains a multiFasta)
 
 ```
 >seq1 Fake protein 1
@@ -25,18 +25,18 @@ RMHQWKCITSCYEN
 # How to use with the following example
 
 ```python
-python main/ck_parser.py -i ".\example\data" -o ".\example\output\data_saved.csv" -k "10"
+python main/ck_parser.py -i ".\example\data" -o ".\example\output\stats_clusters.csv" -k "10"
 ```
 
 ## Result
 
-The file `data_saved.csv` will be created in the folder `.\example\output\`.  
+The file `stats_clusters.csv` will be created in the folder `.\example\output\`.  
 You can open it with a spreadsheet program or import it into Python with pandas:
 
 ```python
 import pandas as pd
 
-df = pd.read_csv(r'.\example\output\data_saved.csv')
+df = pd.read_csv(r'.\example\output\stats_clusters.csv')
 print(df.head())
 ```
 
@@ -59,4 +59,35 @@ print(df.head())
 # ** score_aln.py **
 
 ## Data as input
-> **Reminder:** Check the [`data2`](data2) folder for example input files.
+> **Reminder:** Check the [`data2`](data2) folder for example input files. (a folder with the alignement files)
+
+```
+>CK_Pro_MIT9313_02404|CK_00042790
+LSLNTQKSRVDVLSATSVAGLASAAVIVVSA
+>CK_Pro_MIT9303_16681|CK_00042790
+LSLNTQKLRADVPSATSVAGLASGAVIVVSA
+```
+
+# How to use with the following example
+
+```python
+python score_aln.py -i ".\example\data2"  -b ".\example\blosum\BLOSUM62.txt" -o ".\example\output" -s 10
+```
+
+## Result
+
+```csv
+cluster,score,n,Long,score/(L*n)
+CK_00043857_cluster.aln,137,2,29,2.3620689655172415
+CK_00044462_cluster.aln,149,2,30,2.4833333333333334
+CK_00045049_cluster.aln,123,2,30,2.05
+CK_00046779_cluster.aln,139,2,31,2.2419354838709675
+CK_00046969_cluster.aln,144,2,30,2.4
+CK_00035421_cluster.aln,153,2,32,2.390625
+CK_00038482_cluster.aln,137,2,31,2.2096774193548385
+CK_00042790_cluster.aln,114,2,31,1.8387096774193548
+CK_00045640_cluster.aln,158,2,32,2.46875
+CK_00045858_cluster.aln,138,2,31,2.225806451612903
+```
+
+
