@@ -99,8 +99,8 @@ The other one is `SubdivideFolder.py`. You can use this simply with a clone of t
 
 ### example of use
 ```python
-input_dir = r"C:\Users\dodol\Documents\GitHub\cluster_parser\example\data"
-output_dir = r"C:\Users\dodol\Documents\LBM\Stage\ck256\codeScoreAln\tes2"
+input_dir = r".\example\data"
+output_dir = r".\example\data_to_subdivide"
 n_sub = 3
 
 subdivide_folder_by_size(input_dir, output_dir, n_sub)
