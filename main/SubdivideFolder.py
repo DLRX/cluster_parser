@@ -49,5 +49,3 @@ def subdivide_folder_by_size(input_dir, output_dir, n_subdivided):
     print(print_infos(output_dir))
 
 
-
-
