@@ -1,5 +1,5 @@
 
-# **cluster_parser.py **
+# **cluster_parser.py**
 
 ## Data as input
 > **Reminder:** Check the [`data`](data) folder for example input files. (a folder with a file per cluster that contains a multiFasta)
@@ -55,10 +55,10 @@ print(df.head())
 ```
 
 
-# ** score_aln.py **
+# **score_aln.py**
 
 ## Data as input
-> **Reminder:** Check the [`data2`](data2) folder for example input files. (a folder with the alignement files)
+> **Reminder:** Check the [`data2`](data2) folder for example input files. (a folder with the alignment files)
 
 ```
 >CK_Pro_MIT9313_02404|CK_00042790
@@ -91,3 +91,8 @@ python score_aln.py -i ".\example\data2"  -b ".\example\blosum\BLOSUM62.txt" -o 
 ```
 
 
+# Supplementary 
+# Supplementary
+You can find two other scripts; one is generate_set_fasta.py, which can easily be found on the web to generate a folder with several files that contain random fake fasta sequences.
+You can find two other scripts: one is `generate_set_fasta.py`, which can easily be found on the web to generate a folder with several files that contain random fake fasta sequences.
+The other one is `SubdivideFolder.py`. You can use this simply with a clone of the repo, and import the function `subdivide_folder_by_size`.folder and the number totale of subdivision that you want to do This function takes as parameters the original folder that you want to split into many smaller ones, the `output_dir` where to locate the new folders, and the total number of subdivisions that you want to do.
