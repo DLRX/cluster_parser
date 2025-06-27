@@ -1,4 +1,7 @@
-# Data as input
+
+# ** cluster_parser.py **
+
+## Data as input
 > **Reminder:** Check the [`data`](data) folder for example input files.
 
 ```
@@ -51,3 +54,9 @@ print(df.head())
 | fake_8.fasta    | 37 | 209.622 | 109.548 | 60  | 391 | 2.703        |
 | fake_9.fasta    | 96 | 219.208 | 100.4   | 48  | 399 | 1.042        |
 ```
+
+
+# ** score_aln.py **
+
+## Data as input
+> **Reminder:** Check the [`data2`](data2) folder for example input files.
