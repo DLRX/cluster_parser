@@ -71,6 +71,8 @@ python SubdivideFolder.py -i ".\example\data"  -o ".\example\data_to_subdivide" 
 
 ### Result
 
+Check the [`result`](.\example\data_to_subdivide)
+
 
 
 
