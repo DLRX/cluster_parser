@@ -62,3 +62,15 @@ python score_aln.py -i ".\example\data2"  -b ".\example\blosum\BLOSUM62.txt" -o 
 ```
 
 # SubdivideFolder.py
+
+### How to use ?
+
+```python
+python SubdivideFolder.py -i ".\example\data"  -o ".\example\data_to_subdivide" -n 3
+```
+
+### Result
+
+
+
+
