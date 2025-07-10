@@ -71,7 +71,11 @@ python SubdivideFolder.py -i ".\example\data"  -o ".\example\data_to_subdivide" 
 
 ### Result
 
-Check the [`result`](.\example\data_to_subdivide)
+```
+subfolder_1: 41061 octets, 3 fichiers
+subfolder_2: 43068 octets, 3 fichiers
+subfolder_3: 41070 octets, 4 fichiers
+```
 
 
 
