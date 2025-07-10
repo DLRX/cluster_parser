@@ -36,8 +36,29 @@ print(df.head())
 | fake_9.fasta    | 96 | 219.208 | 100.4   | 48  | 399 | 1.042        |
 ```
 
-
-
 # score_aln.py
+
+### How to use ?
+
+```python
+python score_aln.py -i ".\example\data2"  -b ".\example\blosum\BLOSUM62.txt" -o ".\example\output" -s 10
+```
+
+### Result
+
+```csv
+| Cluster                  | score | n | Long | score/(L*n)         |
+|--------------------------|-------|---|------|---------------------|
+| CK_00043857_cluster.aln  | 137   | 2 | 29   | 2.3620689655172415  |
+| CK_00044462_cluster.aln  | 149   | 2 | 30   | 2.4833333333333334  |
+| CK_00045049_cluster.aln  | 123   | 2 | 30   | 2.05                |
+| CK_00046779_cluster.aln  | 139   | 2 | 31   | 2.2419354838709675  |
+| CK_00046969_cluster.aln  | 144   | 2 | 30   | 2.4                 |
+| CK_00035421_cluster.aln  | 153   | 2 | 32   | 2.390625            |
+| CK_00038482_cluster.aln  | 137   | 2 | 31   | 2.2096774193548385  |
+| CK_00042790_cluster.aln  | 114   | 2 | 31   | 1.8387096774193548  |
+| CK_00045640_cluster.aln  | 158   | 2 | 32   | 2.46875             |
+| CK_00045858_cluster.aln  | 138   | 2 | 31   | 2.225806451612903   |
+```
 
 # SubdivideFolder.py
