@@ -90,20 +90,16 @@ python score_aln.py -i ".\example\data2"  -b ".\example\blosum\BLOSUM62.txt" -o 
 | CK_00045858_cluster.aln  | 138   | 2 | 31   | 2.225806451612903   |
 ```
 
+# SubdivideFolder.py
 
-# Supplementary
-You can find two other scripts; one is generate_set_fasta.py, which can easily be found on the web to generate a folder with several files that contain random fake fasta sequences.
-You can find two other scripts: one is `generate_set_fasta.py`, which can easily be found on the web to generate a folder with several files that contain random fake fasta sequences.
-The other one is `SubdivideFolder.py`. You can use this simply with a clone of the repo, and import the function `subdivide_folder_by_size`.folder and the number totale of subdivision that you want to do This function takes as parameters the original folder that you want to split into many smaller ones, the `output_dir` where to locate the new folders, and the total number of subdivisions that you want to do.
+## Data as input
+> **Reminder:** Check the [`data`](data) folder for example input files. (a folder with a file per cluster that contains a multiFasta)
 
 
-### example of use
+## How to use with the following example
+
 ```python
-input_dir = r".\example\data"
-output_dir = r".\example\data_to_subdivide"
-n_sub = 3
-
-subdivide_folder_by_size(input_dir, output_dir, n_sub)
+python SubdivideFolder.py -i ".\example\data"  -o ".\example\data_to_subdivide" -n 3
 ```
 
 > Check the [`data_to_subdivide`](data_to_subdivide) folder for example output. (it will creat a n_sub = 3 folder with the same size)
